@@ -1,0 +1,66 @@
+body { font-family:'Arial',sans-serif; }
+#fullpage { width:98%; min-width:790px; margin: 0 auto; }
+
+.codefont { font-family:'Courier New',monospace; font-size:12px; color:gray; }
+
+header { clear:both; height:44px; color:#ffffff; background-color:#476BB2; }
+header h1 { float:left; margin:0; padding:0; padding-left:8px; font-family:'Arial',sans-serif; font-size:36px; font-weight:300; }
+
+nav { clear:both; height:30px; 
+    background:#a3b5d9;
+    background:linear-gradient(#476BB2 0%, #a3b5d9 100%);
+    background:-moz-linear-gradient(top, #476BB2 0%, #a3b5d9 100%);
+    background:-webkit-linear-gradient(top, #476BB2 0%,#a3b5d9 100%); }
+
+nav ul { list-style-type:none; margin:0; padding-top:2px; font-size:16px; float:right; } 
+nav ul li { display:inline; }
+nav ul li a { margin-right:12px; color:#ffffff; text-decoration:none; }
+
+#sectionSchema { clear:both; float:left; margin-top:8px; margin-left:1%; width:49%; display:inline-block; }
+#schemaData { width:100%; height:308px; border:1px solid lightgray; padding-top:1px; display:inline-block; }
+#schemaDataShell { width:30px; height:300px; border-right:1px solid lightgray; background-color:#ffffff; overflow:hidden; display:inline-block; }
+#schemaDataLines { text-align:right; vertical-align:top; overflow:hidden; padding-right:1px; padding-top:2px; }
+#schemaDataText { width:90%; width:calc(100% - 48px); border:1px solid lightgray; height:300px; background-color:#f7f9fc; overflow:auto; resize:none; vertical-align:top; display:inline-block; }
+
+#sectionContent { float:right; margin-top:8px; width:48%; margin-right:1%; padding-top:1px; display:inline-block; }
+#contentData { width:100%; height:308px; border:1px solid lightgray; padding-top:1px; display:inline-block; }
+#contentDataShell { width:30px; height:300px; border-right:1px solid lightgray; background-color:#ffffff; overflow:hidden; display:inline-block; }
+#contentDataLines { text-align:right; vertical-align:top; overflow:hidden; padding-right:1px; padding-top:2px; }
+#contentDataText { width:90%; width:calc(100% - 48px); border:1px solid lightgray; height:300px; background-color:#f7f9fc; overflow:auto; resize:none; display:inline-block; vertical-align:top; }
+
+#sectionRefs { clear:both; float:left; margin-top:12px; margin-left:1%; width:49%; padding-top:1px; display:inline-block; vertical-align:top; }
+#refTabLabel { float:left; }
+#refTabs  { float:right; margin-right:4px; }
+#refTabs ul { margin-top:0px; margin-bottom:4px; }
+#refTabs ul li { list-style-type:none; display:inline; }
+#refTabs ul li a { cursor:pointer; color:black; background-color:#f7f9fc; text-decoration:none;
+    padding:4px 10px; margin-left:4px; border-left:1px solid gray; border-right:1px solid gray;
+    border-top:1px solid gray; border-bottom:1px solid #f7f9fc; 
+    border-top-left-radius:8px; border-top-right-radius:8px; white-space:nowrap; }
+
+#refPages { clear:both; }
+.refPage { width:100%; height:208px; border:1px solid lightgray; display:inline-block; }
+.refShell { width:30px; height:200px; border-right:1px solid lightgray; background-color:#ffffff; overflow:hidden; display:inline-block; }
+.refLines { text-align:right; vertical-align:top; overflow:hidden; padding-right:1px; padding-top:2px; }
+.refText { width:90%; width:calc(100% - 44px); border:1px solid lightgray; height:200px; background-color:#f7f9fc;
+    overflow:auto; resize:none; display:inline-block; vertical-align:top; }
+
+#sectionResults { float:right; margin-top:14px; width:48%; margin-right:1%; display:inline-block; vertical-align:top; }
+#results { width:100%; height:208px; border:1px solid lightgray; background-color:#ffffff; overflow:auto; resize:none; }
+
+#sectionActions { clear:both; float:left; margin-left:1%; margin-top:8px; } 
+#validateButton { margin-right:12px; }
+#resetButton { }
+
+#sectionFooter  { }
+#projectLinkArea { float:right; margin-right:1%; padding-top:4px; padding-right:4px; font-size:14px; }
+#plText { float:left; padding-right:4px; }
+#plIcon { float:right; }
+
+#importTable.gridtable { border-collapse:collapse; }
+#importTable.gridtable td { padding:4px; }
+#catalogLabel { text-align:right; }
+#catalogText { }
+#itemsLabel { text-align:right; }
+#items { background-color:lightyellow; }
+#itemsButton { width:100%; }

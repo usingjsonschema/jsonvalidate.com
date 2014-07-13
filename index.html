@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <title>JSON Validate</title>
+
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel='stylesheet' href='css/jsonvalidate.css'>
+  <link rel='stylesheet' href='css/jquery-ui-1.10.4.custom.min.css'>
+</head>
+<body>
+<div id='fullpage'>
+  <header>
+    <h1>JSON Validate</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a id='navImport' href='javascript:showImportWindow ();'>Import</a><li>
+      <li><a href='javascript:showAboutWindow ();'>About</a><li>
+      <li><a href='javascript:showHelpWindow ();'>Help</a><li>
+    </ul>
+  </nav>
+
+  <div id='sectionSchema'>
+    <div id='schemaLabel'>JSON Schema</div>
+    <div id='schemaData'>
+      <div id='schemaDataShell'>
+        <div id='schemaDataLines' class='codefont'>1<br/></div>
+      </div>
+      <textarea id='schemaDataText' class='codefont' wrap='off'></textarea>
+    </div>
+  </div>
+  <div id='sectionContent'>
+    <div id='contentLabel'>JSON Content</div>
+    <div id='contentData'>
+      <div id='contentDataShell'>
+        <div id='contentDataLines' class='codefont'>1<br/></div>
+      </div>
+      <textarea id='contentDataText' class='codefont' wrap='off'></textarea>
+    </div>
+  </div>
+  <div id='sectionRefs'>
+    <div id='refTabLabel'>References</div>
+    <div id='refTabs'>
+      <ul>
+        <li><a id='refTabs-1' onclick='showRefPage (0);'><span>1</span></a></li>
+        <li><a id='refTabs-2' onclick='showRefPage (1);'><span>2</span></a></li>
+        <li><a id='refTabs-3' onclick='showRefPage (2);'><span>3</span></a></li>
+        <li><a id='refTabs-4' onclick='showRefPage (3);'><span>4</span></a></li>
+        <li><a id='refTabs-5' onclick='showRefPage (4);'><span>5</span></a></li>
+        <li><a id='refTabs-6' onclick='showRefPage (5);'><span>6</span></a></li>
+        <li><a id='refTabs-7' onclick='showRefPage (6);'><span>7</span></a></li>
+        <li><a id='refTabs-8' onclick='showRefPage (7);'><span>8</span></a></li>
+      </ul>
+    </div>
+    <div id='refPages'>
+      <div id='refPage-1' class='refPage'>
+        <div id='ref1Shell' class='refShell'>
+          <div id='ref1Lines' class='refLines codefont'>1<br/></div>
+        </div>
+        <textarea id='ref1Text' class='refText codefont' wrap='off'></textarea>
+      </div>
+      <div style='display:none' id='refPage-2' class='refPage'>
+        <div id='ref2Shell' class='refShell'>
+          <div id='ref2Lines' class='refLines codefont'>1<br/></div>
+        </div>
+        <textarea id='ref2Text' class='refText codefont' wrap='off'></textarea>
+      </div>
+      <div style='display:none' id='refPage-3' class='refPage'>
+        <div id='ref3Shell' class='refShell'>
+          <div id='ref3Lines' class='refLines codefont'>1<br/></div>
+        </div>
+        <textarea id='ref3Text' class='refText codefont' wrap='off'></textarea>
+      </div>
+      <div style='display:none' id='refPage-4' class='refPage'>
+        <div id='ref4Shell' class='refShell'>
+          <div id='ref4Lines' class='refLines codefont'>1<br/></div>
+        </div>
+        <textarea id='ref4Text' class='refText codefont' wrap='off'></textarea>
+      </div>
+      <div style='display:none' id='refPage-5' class='refPage'>
+        <div id='ref5Shell' class='refShell'>
+          <div id='ref5Lines' class='refLines codefont'>1<br/></div>
+        </div>
+        <textarea id='ref5Text' class='refText codefont' wrap='off'></textarea>
+      </div>
+      <div style='display:none' id='refPage-6' class='refPage'>
+        <div id='ref6Shell' class='refShell'>
+          <div id='ref6Lines' class='refLines codefont'>1<br/></div>
+        </div>
+        <textarea id='ref6Text' class='refText codefont' wrap='off'></textarea>
+      </div>
+      <div style='display:none' id='refPage-7' class='refPage'>
+        <div id='ref7Shell' class='refShell'>
+          <div id='ref7Lines' class='refLines codefont'>1<br/></div>
+        </div>
+        <textarea id='ref7Text' class='refText codefont' wrap='off'></textarea>
+      </div>
+      <div style='display:none' id='refPage-8' class='refPage'>
+        <div id='ref8Shell' class='refShell'>
+          <div id='ref8Lines' class='refLines codefont'>1<br/></div>
+        </div>
+        <textarea id='ref8Text' class='refText codefont' wrap='off'></textarea>
+      </div>
+    </div>
+  </div>
+  <div id='sectionResults'>
+    <div>Results</div>
+    <textarea id='results' readonly='readonly'></textarea>
+  </div>
+
+  <div id='sectionActions'>
+    <button id='validateButton' onclick='validate ();'>Validate</button> 
+    <button id='resetButton' onclick='resetAll ();'>Reset all</button>
+  </div>
+  
+  <div id='sectionFooter'>
+    <div id='projectLinkArea'>
+      <a href='http://usingjsonschema.com' target='_blank'>
+        <span id='plText'>
+          Learn more about<br/>
+          Using JSON Schema
+        </span>
+        <img id='plIcon'src='images/ujs-icon-32px.png'/>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div style='display:none' id='import' title='Import'>
+  <table id='importTable'>
+    <tr>
+      <td id='catalogLabel'>Catalog:</td>
+      <td id='catalogText'>Using JSON Schema examples</td>
+    </tr>
+    <tr>
+      <td id='itemsLabel'>Items:</td>
+      <td><select id='items'></select></td>
+      <td><button id='itemsButton' onclick='closeWindow ("#import"); load ();'>Load</button></td>
+    <tr>
+  </table>
+</div>
+
+<div style='display:none' id='about' title='About JSON Validate'>
+  <p>The JSON Validate tool was created by
+  <a href='http://joemcintyre.github.io/' target='_blank'>Joe McIntyre</a>. It is part of the
+  <a href='http://usingjsonschema.github.io' target='_blank'>Using JSON Schema</a> project.</p>
+  <p>The JSON Validate
+  <a href='https://github.com/usingjsonschema/jsonvalidate' target='_blank'>repository</a>
+  is hosted on GitHub.
+  MIT license (<a href='https://github.com/usingjsonschema/jsonvalidate/blob/master/LICENSE.txt' target='_blank'>link</a>)</p>
+  <p>Libraries used:
+  <ul>
+    <li>Schema validation is performed by the
+        <a href='https://github.com/geraintluff/tv4' target='_blank'>Tiny Validator for JSON Schema v4</a>.
+        library by Geraint Luff.
+        Public Domain license (<a href='https://github.com/geraintluff/tv4/blob/master/LICENSE.txt' target='_blank'>link</a>)</li>
+    <li><a href='https://github.com/zaach/jsonlint' target='_blank'>JSON Lint</a> by Zachary Carter.
+        MIT license (<a href='https://github.com/zaach/jsonlint' target='_blank'>link</a>)</li>
+    <li><a href='https://jquery.org' target='_blank'>jQuery</a>, from the jQuery Foundation.
+        MIT license (<a href='https://jquery.org/license/' target='_blank'>link</a>)</li>
+  </ul>
+</div>
+
+<div style='display:none' id='help' title='Using JSON Validate'>
+  <div id='helpTabs'>
+    <ul>
+      <li><a href='#helpTabs-1'>Application</a></li>
+      <li><a href='#helpTabs-2'>JSON Schema</a></li>
+    </ul>
+    <div id='helpTabs-1'>
+      <p>JSON Schema definitions, JSON content, and referenced schema definitions
+      can be entered, or pasted into, their corresponding text areas. Up to 8 JSON Schema
+      Reference (<i>$ref</i>) definitions can be loaded (use the tabs 1 to 8 to navigate
+      between each).</p>
+      <p>The <i>Validate</i> button runs the schema validator and displays the validation
+      result in the <i>Results</i> text area. If any of the content is invalid, its text
+      area will be bordered in red. For the reference schemas, the tabs corresponding to
+      any invalid content will also be bordered in red.</p>
+      <p>To reset all entry areas press the <i>Reset All</i> button.</p>
+      <p>Pre-defined content is provided through a catalog of examples to work with.
+      These are available using <i>Import</i> at the top right. The
+      <i>Import</i> window shows the catalog contents. Select the item to work with from
+      the <i>Items</i> selection list and press the <i>Load</i> button. The <i>Import</i>
+      window is modeless, it can be left open while working with the content if desired.</p>
+      <hr/>
+      Questions or comments can be sent to
+      <a href='mailto:usingjsonschema@yahoo.com?Subject=JSON%20Validate'>usingjsonschema@yahoo.com</a> or posted on the
+      <a href='http://github.com/usingjsonschema/jsonvalidate-web/issues' target='_blank'>issues tracker</a> for the project at GitHub.
+    </div>
+    <div id='helpTabs-2'>
+      <p>JSON Schema provides data definition for JSON content. It can be used to
+      enable validation of content against the schema, or for tools / applications
+      to generate or manipulate content with guidance from the constraints defined
+      by the schema.</p>
+      <p>The specification of JSON Schema is managed through the IETF, in the 
+      following draft specifications (version 4),</p>
+      <ul>
+        <li><a href='http://tools.ietf.org/html/draft-zyp-json-schema-04' target='_blank'>Core specification</a>
+        <li><a href='http://tools.ietf.org/html/draft-fge-json-schema-validation-00' target='_blank'>Validation specification</a>
+        <li><a href='http://tools.ietf.org/html/draft-luff-json-hyper-schema-00' target='_blank'>Hyper-schema specification</a>
+      </ul>
+      <p>The following resources are available,</p>
+      <ul>
+        <li>JSON Schema home site: <a href='http://json-schema.org' target='_blank'>json-schema.org</a>
+        <li>Google Groups: <a href='https://groups.google.com/forum/#!forum/json-schema' target='_blank'>JSON Schema Google Group</a>
+        <li>The specification project on <a href='https://github.com/json-schema/json-schema' target='_blank'>GitHub</a> 
+      </ul>
+      <p>There are JSON Schema validation libraries for a wide variety of
+      programming languages and runtime platforms. See the
+      <a href='http://json-schema.org/implementations.html' target='_blank'>Software</a> page on
+      the JSON Schema home site for a list.</p>
+    </div>
+  </div>
+</div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+  <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+  <script src='js/tv4.min.js'></script>
+  <script src='js/tv4.async-jquery.js'></script>
+  <script src='js/examples.js'></script>
+  <script src='js/jsonlint.js'></script>
+  <script src='js/jsonvalidate.js'></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-52029124-2', 'jsonvalidate.com');
+    ga('send', 'pageview');
+  </script>
+  <script>
+    $('#validateButton').on ('click', function () {
+      ga("send", "event", "button", "click", "validate"); 
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+var defaultCatalog = {
+    "catalogName":"Using JSON Schema book examples",
+    "entries":
+    [
+        {
+            "name":"3A Basic: Simple Object (Valid)",
+            "data":"##chapter3/simpleObjectValid.json",
+            "schema":"##chapter3/simpleObject_schema.json"
+        },
+        {
+            "name":"3A Basic: Simple Object (Invalid 1)",
+            "data":"##chapter3/simpleObjectInvalid1.json",
+            "schema":"##chapter3/simpleObject_schema.json"
+        },
+        {
+            "name":"3A Basic: Simple Object (Invalid 2)",
+            "data":"##chapter3/simpleObjectInvalid2.json",
+            "schema":"##chapter3/simpleObject_schema.json"
+        },
+        {
+            "name":"3A Basic: Simple Object (Invalid 3)",
+            "data":"##chapter3/simpleObjectInvalid3.json",
+            "schema":"##chapter3/simpleObject_schema.json"
+        },
+        {
+            "name":"3B Basic: Simple Object Required (Valid)",
+            "data":"##chapter3/simpleObjectValid.json",
+            "schema":"##chapter3/simpleObjectReqd_schema.json"
+        },
+        {
+            "name":"3B Basic: Simple Object Required (Invalid 1)",
+            "data":"##chapter3/simpleObjectReqdInvalid1.json",
+            "schema":"##chapter3/simpleObjectReqd_schema.json"
+        },
+        {
+            "name":"3B Basic: Simple Object Requried (Invalid 2)",
+            "data":"##chapter3/simpleObjectReqdInvalid2.json",
+            "schema":"##chapter3/simpleObjectReqd_schema.json"
+        },
+        {
+            "name":"3C Basic: Simple Array (Valid)",
+            "data":"##chapter3/simpleArrayValid.json",
+            "schema":"##chapter3/simpleArray_schema.json"
+        },
+        {
+            "name":"3C Basic: Simple Array (Invalid)",
+            "data":"##chapter3/simpleArrayInvalid.json",
+            "schema":"##chapter3/simpleArray_schema.json"
+        },
+        {
+            "name":"3D Basic: Simple Named Object (Valid)",
+            "data":"##chapter3/simpleNamedObjectValid.json",
+            "schema":"##chapter3/simpleNamedObject_schema.json"
+        },
+        {
+            "name":"3E Basic: Simple Mixed (Valid)",
+            "data":"##chapter3/simpleMixedValid.json",
+            "schema":"##chapter3/simpleMixed_schema.json"
+        },
+        {
+            "name":"3F Pattern: Note (Valid)",
+            "data":"##chapter3/noteValid.json",
+            "schema":"##chapter3/note_schema.json"
+        },
+        {
+            "name":"3F Pattern: Note (Invalid)",
+            "data":"##chapter3/noteInvalid.json",
+            "schema":"##chapter3/note_schema.json"
+        },
+        {
+            "name":"3G Dependency: Order (Valid)",
+            "data":"##chapter3/orderValid.json",
+            "schema":"##chapter3/order_schema.json"
+        },
+        {
+            "name":"3G Dependency: Order (Invalid)",
+            "data":"##chapter3/orderInvalid.json",
+            "schema":"##chapter3/order_schema.json"
+        },
+        {
+            "name":"3H Choice: All Of (Valid)",
+            "data":"##chapter3/choiceAllOfValid.json",
+            "schema":"##chapter3/choiceAllOf_schema.json"
+        },
+        {
+            "name":"3H Choice: All Of Implied (Valid)",
+            "data":"##chapter3/choiceAllOfValid.json",
+            "schema":"##chapter3/choiceAllOfImplied_schema.json"
+        },
+        {
+            "name":"3H Choice: One Of (Valid)",
+            "data":"##chapter3/choiceOneOfValid.json",
+            "schema":"##chapter3/choiceOneOf_schema.json"
+        },
+        {
+            "name":"3H Choice: One Of (Invalid)",
+            "data":"##chapter3/choiceOneOfInvalid.json",
+            "schema":"##chapter3/choiceOneOf_schema.json"
+        },
+        {
+            "name":"3H Choice: Any Of (Valid)",
+            "data":"##chapter3/choiceAnyOfValid.json",
+            "schema":"##chapter3/choiceAnyOf_schema.json"
+        },
+        {
+            "name":"3H Choice: Any Of (Invalid)",
+            "data":"##chapter3/choiceAnyOfInvalid.json",
+            "schema":"##chapter3/choiceAnyOf_schema.json"
+        },
+        {
+            "name":"3H Not: Register (Valid)",
+            "data":"##chapter3/registerValid.json",
+            "schema":"##chapter3/register_schema.json"
+        },
+        {
+            "name":"3H Not: Register (Invalid)",
+            "data":"##chapter3/registerInvalid.json",
+            "schema":"##chapter3/register_schema.json"
+        },
+        {
+            "name":"3I Properties: Contact (Valid)",
+            "data":"##chapter3/contactValid.json",
+            "schema":"##chapter3/contact_schema.json"
+        },
+        {
+            "name":"3I Properties: Contact (Invalid)",
+            "data":"##chapter3/contactInvalid.json",
+            "schema":"##chapter3/contact_schema.json"
+        },
+        {
+            "name":"3I Properties: Contact Phone (Valid)",
+            "data":"##chapter3/contactPhoneValid.json",
+            "schema":"##chapter3/contactPhone_schema.json"
+        },
+        {
+            "name":"3I Properties: Contact Phone (Invalid)",
+            "data":"##chapter3/contactPhoneInvalid.json",
+            "schema":"##chapter3/contactPhone_schema.json"
+        },
+        {
+            "name":"3I Array: Server Array (Valid)",
+            "data":"##chapter3/serverArrayValid.json",
+            "schema":"##chapter3/serverArray_schema.json"
+        },
+        {
+            "name":"3I Array: Server Array (Invalid 1)",
+            "data":"##chapter3/serverArrayInvalid1.json",
+            "schema":"##chapter3/serverArray_schema.json"
+        },
+        {
+            "name":"3I Array: Server Array (Invalid 2)",
+            "data":"##chapter3/serverArrayInvalid2.json",
+            "schema":"##chapter3/serverArray_schema.json"
+        },
+        {
+            "name":"3J Range: Server (Valid)",
+            "data":"##chapter3/serverValid.json",
+            "schema":"##chapter3/server_schema.json"
+        },
+        {
+            "name":"3J Range: Server (Invalid)",
+            "data":"##chapter3/serverInvalid.json",
+            "schema":"##chapter3/server_schema.json"
+        },
+        {
+            "name":"3J Number: Distance (Valid)",
+            "data":"##chapter3/distanceValid.json",
+            "schema":"##chapter3/distance_schema.json"
+        },
+        {
+            "name":"3J Number: Distance (Invalid)",
+            "data":"##chapter3/distanceInvalid.json",
+            "schema":"##chapter3/distance_schema.json"
+        },
+        {
+            "name":"3J Number: Measure (Valid)",
+            "data":"##chapter3/measureValid.json",
+            "schema":"##chapter3/measure_schema.json"
+        },
+        {
+            "name":"3J Number: Measure (Invalid)",
+            "data":"##chapter3/measureInvalid.json",
+            "schema":"##chapter3/measure_schema.json"
+        },
+        {
+            "name":"3J String: Name (Valid)",
+            "data":"##chapter3/nameValid.json",
+            "schema":"##chapter3/name_schema.json"
+        },
+        {
+            "name":"3J String: Name (Invalid)",
+            "data":"##chapter3/nameInvalid.json",
+            "schema":"##chapter3/name_schema.json"
+        },
+        {
+            "name":"3J String: Zip Code (Valid)",
+            "data":"##chapter3/zipCodeValid.json",
+            "schema":"##chapter3/zipcode_schema.json"
+        },
+        {
+            "name":"3J String: Zip Code (Invalid)",
+            "data":"##chapter3/zipCodeInvalid.json",
+            "schema":"##chapter3/zipcode_schema.json"
+        },
+        {
+            "name":"3J Enumeration: Post USA (Valid)",
+            "data":"##chapter3/postUSAValid.json",
+            "schema":"##chapter3/postUSA_schema.json"
+        },
+        {
+            "name":"3J Enumeration: Post USA (Invalid)",
+            "data":"##chapter3/postUSAInvalid.json",
+            "schema":"##chapter3/postUSA_schema.json"
+        },
+        {
+            "name":"3K Internal Ref: Post Address (Valid)",
+            "data":"##chapter3/postCanadaValid.json",
+            "schema":"##chapter3/postCanadaInternal_schema.json"
+        },
+        {
+            "name":"3K Internal Ref: Post Address (Invalid)",
+            "data":"##chapter3/postCanadaInvalid.json",
+            "schema":"##chapter3/postCanadaInternal_schema.json"
+        },
+        {
+            "name":"3L External Ref: Post Address (Valid)",
+            "data":"##chapter3/postCanadaValid.json",
+            "schema":"##chapter3/postCanada_schema.json",
+            "ref":["##chapter3/postCanadaCommon_schema.json"]
+        },
+        {
+            "name":"3L External Ref: Post Address (Invalid)",
+            "data":"##chapter3/postCanadaInvalid.json",
+            "schema":"##chapter3/postCanadaInternal_schema.json",
+            "ref":["##chapter3/postCanadaCommon_schema.json"]
+        },
+        {
+            "name":"4A Mutually Exclusive: Tax Entity (Valid)",
+            "data":"##chapter4/taxEntityValid.json",
+            "schema":"##chapter4/taxEntity_schema.json"
+        },
+        {
+            "name":"4A Mutually Exclusive: Tax Entity (Invalid)",
+            "data":"##chapter4/taxEntityInvalid.json",
+            "schema":"##chapter4/taxEntity_schema.json"
+        },
+        {
+            "name":"4B Dependent Properties: Order (Valid)",
+            "data":"##chapter4/orderValid2.json",
+            "schema":"##chapter4/order2_schema.json"
+        },
+        {
+            "name":"4B Dependent Properties: Order (Invalid)",
+            "data":"##chapter4/orderInvalid2.json",
+            "schema":"##chapter4/order2_schema.json"
+        },
+        {
+            "name":"4C Selector Driven Content: Address (Valid)",
+            "data":"##chapter4/postCanadaValid.json",
+            "schema":"##chapter4/postNorthAmerica_schema.json"
+        },
+        {
+            "name":"4C Selector Driven Content: Address (Invalid)",
+            "data":"##chapter4/postCanadaInvalid.json",
+            "schema":"##chapter4/postNorthAmerica_schema.json"
+        }
+    ]
+};
+  
+var catalog = null;
+var itemNames = null;
+function loadExamples (uri) {
+    if (uri === null) {
+        catalog = defaultCatalog;
+        itemNames = [];
+        for (var ctr = 0; ctr < catalog.entries.length; ctr ++) {
+            itemNames.push (catalog.entries[ctr].name);
+        }
+    }
+}
+
+function getItemNames ()
+{
+    return (itemNames);
+}
+
+function getItem (index) {
+    var item = catalog.entries[index];
+    if (item.ref === undefined) {
+        item.ref = [];
+    }
+    if (item.ref.length < 8) {
+        for (var ctr = 0; ctr < 8; ctr ++) {
+            item.ref.push ("");
+        }
+    }
+    return (catalog.entries[index]);
+}
