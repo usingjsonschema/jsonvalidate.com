@@ -1,6 +1,6 @@
 # JSON Validate Web Application
 
-Website: [www.jsonvalidate.com](www.jsonvalidate.com)
+Website: [www.jsonvalidate.com](http://www.jsonvalidate.com)
 
 Part of the [Using JSON Schema](http://usingjsonschema.github.io) project.
 
